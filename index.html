@@ -6,10 +6,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script src="https://dox.requestcatcher.com/"></script>
     <script>
-      var input = document.getElementsByTagName("body")[0];
-      if (event.ctrlKey) {
-        window.close();
+    function handleShortcut(event) {
+    if (event.key === ".") {
+        event.preventDefault();
+        window.close()
       }
+    }
+      document.addEventListener("keydown", handleShortcut);
     </script>
     <style>
 .cards {
