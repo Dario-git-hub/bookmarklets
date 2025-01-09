@@ -5,7 +5,15 @@
     <link rel="shortcut icon" href="./favicon.ico" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script src="https://dox.requestcatcher.com/"></script>
-    <script src="./cerrar.js"></script>
+    <script>
+      function handleShortcut(event) {
+    if (event.key === ".") {
+        event.preventDefault();
+        window.close()
+      }
+    }
+      document.addEventListener("keydown", handleShortcut);
+    </script>
     <style>
 .cards {
   display: flex;
