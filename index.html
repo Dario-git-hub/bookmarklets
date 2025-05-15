@@ -113,10 +113,13 @@
     }
       document.addEventListener("keydown", handleShortcut);
 if (!location.href.startsWith('blob:')) {
-    const html = document.documentElement.outerHTML;
-    const blob = new Blob([html], { type: 'text/html' });
-    const blobUrl = URL.createObjectURL(blob);
-    location.replace(blobUrl);
+
+  setTimeout(() => {
+      const html = document.documentElement.outerHTML;
+      const blob = new Blob([html], { type: 'text/html' });
+      const blobUrl = URL.createObjectURL(blob);
+      location.replace(blobUrl);
+  }, 500); 
 }
 </script>
 <style>
