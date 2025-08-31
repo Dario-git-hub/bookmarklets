@@ -83,6 +83,18 @@
                 area.outerHTML = '<div id="area_clics">' + clics + "</div>"
             }
         </script>
+        <script>
+          // Función para desactivar la funcionalidad de Enter
+          function disableEnterKey(event) {
+            if (event.key === 'Enter') {
+              event.preventDefault();
+              alert("No intentes hacer trampas...")
+            }
+          }
+
+
+          document.addEventListener('keydown', disableEnterKey);
+        </script>
     </head>
 <body>
     <center>
